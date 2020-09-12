@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    width: 67%;
+    width: 1200px;
     margin: auto;
     margin-top: 100px;
 }
@@ -114,16 +114,23 @@ main {
     }
 }
 
+@media (max-width:1150px) {
+    main {
+        width: 90%;
+    }
+}
+
 @media (max-width:992px) {
     main {
         width: 90%;
         margin: auto;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
 
     .description {
         .container{
+            margin-bottom: 20px;
             .row {
                 display: flex;
                 flex-direction: column;
@@ -133,8 +140,70 @@ main {
                 .info p {
                     display: flex;
                     width: 200%;
+                    margin-top: 0px;
+                    font-size: 14px;
                 }
             }
         }
     }
+
+    .team {
+        .container {
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+    
+                .crew.column {
+                    width: 50%;
+    
+                    img {
+                        width: 80%;
+                        border-radius: 8px;
+                        height: auto;
+                        
+                    }
+                }
+    
+                .crew {
+                    margin-bottom: 100px;
+                    p {
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+    
+                    span {
+                        position: absolute;
+                        top: 0;
+                        writing-mode: vertical-lr;
+                        font-family: 'PT Serif', serif;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        font-weight: lighter;
+                        line-height: 50px;
+                    }
+                }
+    
+    
+                .crew:nth-child(1),
+                .crew:nth-child(3),
+                .crew:nth-child(5) {
+                    position: relative;
+                    top: 0px;
+                }
+    
+                .crew:nth-child(2),
+                .crew:nth-child(4),
+                .crew:nth-child(6) {
+                    position: relative;
+                    top: 75px;
+                }
+    
+            }
+    
+        }
+    }
+
 }
